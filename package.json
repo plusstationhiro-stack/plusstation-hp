@@ -1,0 +1,10 @@
+{
+  "name": "plusstation-hp",
+  "private": true,
+  "version": "0.1.0",
+  "description": "++Station 公式サイト / パスワード再設定（静的）",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "npx --yes serve ."
+  }
+}

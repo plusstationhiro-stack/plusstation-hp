@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
+  "framework": null,
+  "rewrites": [{ "source": "/reset-password", "destination": "/reset-password.html" }]
+}
