@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "description": "++Station 公式サイト / パスワード再設定（静的）",
   "scripts": {
-    "build": "node build.mjs",
+    "build:news": "node scripts/build-news.mjs",
+    "build": "node scripts/build-news.mjs && node build.mjs",
     "dev": "npx --yes serve ."
   }
 }

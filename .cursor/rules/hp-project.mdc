@@ -1,0 +1,33 @@
+---
+description: plusstation-hp 全体の作業ルール（会社サイト・触ってよい範囲）
+alwaysApply: true
+---
+
+# plusstation-hp プロジェクトルール
+
+## このリポジトリの役割
+
+- 株式会社 Plus Station の**公式サイト**（静的 HTML/CSS）。個人アプリ・Team Web 本体のコードは扱わない。
+- 設計の正は `docs/hp-brief.md`。実装・コピー・ページ構成は brief に従う。矛盾する変更を勝手にしない。
+
+## サイト方針（要約）
+
+- **会社サイトとして二本柱**（個人 ++Station / チーム Plus Station Team）
+- 優先度は**チーム寄り**。トップは分岐だけ、詳細は別ページ
+- チーム CTA = お問い合わせフォーム／個人 CTA = App Store・Google Play（個人に問い合わせを置かない）
+- 法的 3 点（プライバシー・利用規約 EULA・特商法）は `plusstation-new` の既存文言を流用。勝手に書き換えない
+- Studio は使わない。ニュースは `content/news.json` → `npm run build:news`
+- 公開実績の第一弾はシュバル（CHEVAL）。被リンク受け皿 URL を大切にする
+- 千葉ジェッツ等の未発表チーム名は載せない
+- Studio 審査中の規約・プライバシー URL は触らない
+
+## 技術
+
+- 静的サイトを維持する。React/Next 等を無断で導入しない
+- 既存の `reset-password` フローとフォルダ構成を壊さない
+- コミット・push・本番デプロイは、ユーザーが明示したときだけ
+
+## 他リポジトリ
+
+- サービス内容・価格・法的文言の参照元は `plusstation-new` / `plusstation.team-support-fresh`
+- 参照はよいが、それらのリポジトリをこの作業で編集しない（ユーザーが明示した場合を除く）

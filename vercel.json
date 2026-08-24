@@ -2,5 +2,22 @@
   "buildCommand": "npm run build",
   "outputDirectory": ".",
   "framework": null,
-  "rewrites": [{ "source": "/reset-password", "destination": "/reset-password.html" }]
+  "redirects": [
+    {
+      "source": "/contact",
+      "destination": "https://docs.google.com/forms/d/e/1FAIpQLSejtY6B5naPM6H2yKKAnMXkYXdOmvDeRB_jo1X9jZT2RwYt1A/viewform",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    { "source": "/reset-password", "destination": "/reset-password.html" },
+    { "source": "/app", "destination": "/pages/app.html" },
+    { "source": "/team", "destination": "/pages/team.html" },
+    { "source": "/company", "destination": "/pages/company.html" },
+    { "source": "/news", "destination": "/pages/news.html" },
+    { "source": "/news/:slug", "destination": "/pages/news/:slug.html" },
+    { "source": "/terms", "destination": "/pages/terms.html" },
+    { "source": "/privacy", "destination": "/pages/privacy.html" },
+    { "source": "/tokusho", "destination": "/pages/tokusho.html" }
+  ]
 }

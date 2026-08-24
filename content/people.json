@@ -1,0 +1,36 @@
+[
+  {
+    "id": "takaishi",
+    "image": "/assets/people/pt-cscs.png",
+    "name": "ヒロ",
+    "legalName": "高石 知洋",
+    "displayName": "ヒロ",
+    "credentials": [
+      "NSCA-CSCS",
+      "理学療法士",
+      "Animal Flow Lv1 Instructor"
+    ],
+    "bio": [
+      "メディカル面やフィジカル面のサポートとして東京都、埼玉県を中心とする高等学校や大学の陸上競技部または選手を支援。現在は、幼児から小学生に速く走る教室を開催し、指導している。"
+    ],
+    "sourceFile": "IMG_9901-Photoroom.png",
+    "published": true
+  },
+  {
+    "id": "kurotori",
+    "image": "/assets/people/pt.png",
+    "name": "クロ",
+    "legalName": "黒鳥 聖也",
+    "displayName": "クロ",
+    "credentials": [
+      "理学療法士",
+      "Animal Flow Lv1 Instructor"
+    ],
+    "bio": [
+      "埼玉県内のサッカーユースチームへメディカル・フィジカルサポートを実施。現在は、児童福祉事業で幼児〜高校生まで幅広く支援。",
+      "身体作り、競技力向上、ケアまで全力でサポートしていきます。"
+    ],
+    "sourceFile": "IMG_9902-Photoroom.png",
+    "published": true
+  }
+]
