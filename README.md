@@ -37,10 +37,29 @@ Cursor 用ルールは `.cursor/rules/`（`hp-project` / `hp-design`）。
 審査中の Studio URL（利用規約・プライバシー）は **触らない**。  
 ここは下地。写真・デザインは後で反映し、完成後にドメイン切替を検討。
 
-## Vercel（将来）
+## Git
 
-Root Directory = このリポジトリ直下。  
-個人アプリの `EXPO_PUBLIC_APP_WEB_URL` は本番ホストに合わせる。
+GitHub: `plusstationhiro-stack/plusstation-hp`（`main` に push で Vercel 本番デプロイ）
+
+## Vercel
+
+本番: **https://plusstation-hp.vercel.app**
+
+Root Directory = このリポジトリ直下。`npm run build`（`vercel.json` 済み）。
+
+Environment Variables（個人 Supabase — auth-web と同じ）:
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `NEXT_PUBLIC_APP_SCHEME` = `plusstation-app`（任意）
+
+DNS 切替時は Vercel → Domains で `plus-station.jp` を追加。
+
+## ドメイン切替の順序（メモ）
+
+1. Vercel で HP をデプロイ（まず `plusstation-hp.vercel.app`）
+2. ストア・Studio 登録 URL を `orchid418137.studio.site/...` → `plus-station.jp/...` に更新
+3. `plus-station.jp` の DNS を Vercel（この HP プロジェクト）へ切替
+4. 安定後、アプリの `EXPO_PUBLIC_APP_WEB_URL` を HP 本番に寄せる（auth-web からの移行）
 
 ## アプリ側に残している auth-web
 

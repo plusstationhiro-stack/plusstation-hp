@@ -152,11 +152,20 @@
           <div class="wrap home-mission__wrap">
             <p class="eyebrow home-mission__eyebrow">私たちの思い</p>
             <div class="home-mission__inner">
-              <div class="home-mission__heading">
+              <div class="home-mission__lead">
                 <h2 id="mission-heading">
                   <span>一人ひとりの可能性を</span>
                   <span>最大限に。</span>
                 </h2>
+                <figure class="home-mission__photo">
+                  <img
+                    src="/assets/hero/mission.jpg"
+                    alt="屋外のバスケットコートで、ボールを持って練習に向かう選手"
+                    width="1920"
+                    height="1280"
+                    decoding="async"
+                  />
+                </figure>
               </div>
               <div class="home-mission__body">
                 <p>
@@ -179,7 +188,7 @@
               <p>チーム向けサービスと、個人向けアプリを提供しています。</p>
             </div>
             <div class="home-paths__grid">
-              <article class="home-path home-path--team">
+              <a class="home-path home-path--team" href="/pages/team.html" aria-label="チーム向けサービスの詳細を見る">
                 <div class="home-path__visual home-path__visual--team" aria-hidden="true">
                   <span class="home-path__number">01</span>
                   <div class="home-team-ui">
@@ -204,28 +213,51 @@
                   <h3>チーム向け</h3>
                   <strong>チームに最適なトレーニング環境の構築</strong>
                   <p>体調管理や自主トレ動画など、競技・年代に合わせて必要な機能を選べます。</p>
-                  <a href="/pages/team.html">チーム向けを見る <span>→</span></a>
+                  <span class="home-path__cta">サービスを見る <b>→</b></span>
                 </div>
-              </article>
-              <article class="home-path home-path--app">
+              </a>
+              <a class="home-path home-path--app" href="/pages/app.html" aria-label="個人向けアプリの詳細を見る">
                 <div class="home-path__visual home-path__visual--app" aria-hidden="true">
                   <span class="home-path__number">02</span>
-                  <div class="mock-phone home-app-phone">
-                    <div class="mock-phone__speaker"></div>
-                    <div class="mock-phone__screen home-app-login">
-                      <div class="home-app-login__inner">
-                        <div class="home-app-login__logo-section">
-                          <div class="home-app-login__logo-frame">
-                            <img class="home-app-login__logo-img" src="/assets/app-icon.png" alt="" width="240" height="240" />
+                  <div class="home-path-phone">
+                    <div class="phone-frame home-path-phone__frame">
+                      <div class="phone-frame__screen app-home-ui">
+                        <div class="app-home-ui__top">
+                          <img src="/assets/app-icon.png" alt="" width="40" height="40" />
+                          <span>こんにちは</span>
+                          <button type="button" tabindex="-1">•••</button>
+                        </div>
+                        <div class="app-home-ui__score">
+                          <div class="app-home-ui__ring">
+                            <span>今日の状態</span>
+                            <strong>82</strong>
+                            <small>GOOD</small>
+                          </div>
+                          <div>
+                            <span>7日連続</span>
+                            <strong>記録を継続中</strong>
+                            <small>昨日よりコンディションが上向いています</small>
                           </div>
                         </div>
-                        <p class="home-app-login__title">ログイン</p>
-                        <div class="home-app-login__field"><span>メールアドレス</span></div>
-                        <div class="home-app-login__field home-app-login__field--password">
-                          <span>パスワード</span>
-                          <i aria-hidden="true"></i>
+                        <div class="app-home-ui__prompt">
+                          <span>今日の記録</span>
+                          <strong>朝の体調を入力する</strong>
+                          <i>→</i>
                         </div>
-                        <div class="home-app-login__btn">ログイン</div>
+                        <div class="app-home-ui__section-head">
+                          <strong>今日のトレーニング</strong>
+                          <span>すべて見る</span>
+                        </div>
+                        <div class="app-home-ui__training">
+                          <div class="app-home-ui__thumb"><i>▶</i><small>06:20</small></div>
+                          <div><strong>加速の基礎ドリル</strong><span>スプリント・初級</span></div>
+                        </div>
+                        <div class="app-home-ui__nav">
+                          <b><i></i><span>ホーム</span></b>
+                          <b><i></i><span>動画</span></b>
+                          <b><i></i><span>記録</span></b>
+                          <b><i></i><span>マイページ</span></b>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -235,9 +267,9 @@
                   <h3>個人向け</h3>
                   <strong>自主練の相棒。</strong>
                   <p>自主トレを続けながら、全国のライバルと切磋琢磨できるスポーツアプリです。</p>
-                  <a href="/pages/app.html">個人向けを見る <span>→</span></a>
+                  <span class="home-path__cta">アプリを見る <b>→</b></span>
                 </div>
-              </article>
+              </a>
             </div>
           </div>
         </section>

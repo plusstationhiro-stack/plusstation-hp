@@ -3843,7 +3843,7 @@ img { max-width: 100%; display: block; }
   gap: clamp(2rem, 5vw, 3.5rem);
   align-items: start;
 }
-.home-mission__heading {
+.home-mission__lead {
   min-width: 0;
 }
 .home-mission h2 {
@@ -3866,6 +3866,35 @@ img { max-width: 100%; display: block; }
   line-height: 1.9;
 }
 .home-mission__body > p:last-of-type { margin-bottom: 2rem; }
+
+.home-mission__photo {
+  position: relative;
+  margin: clamp(1.5rem, 4vw, 2.25rem) 0 0;
+  overflow: hidden;
+  border: 1px solid var(--home-line);
+  aspect-ratio: 4 / 3;
+  background:
+    linear-gradient(rgba(0, 255, 0, 0.04) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, rgba(0, 255, 0, 0.04) 1px, transparent 1px) 0 0 / 28px 28px,
+    #121512;
+}
+
+.home-mission__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 40% center;
+}
+
+.home-mission__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(9, 11, 9, 0.45));
+  pointer-events: none;
+}
 
 /* ホーム：二本柱 */
 .home-paths {
@@ -3895,10 +3924,18 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   border: 1px solid var(--home-line);
   background: #111411;
-  transition: border-color 180ms ease, transform 180ms ease;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
-.home-path:hover {
+.home-path:hover,
+.home-path:focus-visible {
   border-color: rgba(0, 255, 0, 0.4);
+  text-decoration: none;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.25);
+  outline: none;
 }
 .home-path__visual {
   position: relative;
@@ -3908,13 +3945,14 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding: 0.75rem 1rem;
+  padding: 2.55rem 1rem 0.85rem;
   border-bottom: 1px solid var(--home-line);
 }
 .home-path__number {
   position: absolute;
   left: clamp(1.2rem, 3vw, 2rem);
   top: clamp(1rem, 2.5vw, 1.6rem);
+  z-index: 2;
   color: var(--accent);
   font-size: 0.68rem;
   font-weight: 800;
@@ -3990,6 +4028,8 @@ img { max-width: 100%; display: block; }
   flex: 1;
   margin-top: 0.4rem;
   padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--home-line);
   background:
     linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px) 0 0 / 100% 25%,
@@ -3997,119 +4037,41 @@ img { max-width: 100%; display: block; }
   min-height: 0;
 }
 .home-team-ui__chart > small { color: #8c958c; font-size: 0.5rem; }
-.home-team-ui__chart svg { display: block; width: 100%; height: 100%; min-height: 72px; margin-top: 0.15rem; }
+.home-team-ui__chart svg { display: block; width: 100%; height: auto; flex: 1; min-height: 0; margin-top: 0; }
 
 .home-path__visual--app {
+  align-items: center;
+  justify-content: center;
+  padding: 2.55rem 1rem 0.85rem;
   background:
-    radial-gradient(circle, rgba(255, 145, 0, 0.13), transparent 40%),
+    radial-gradient(circle at 68% 42%, rgba(255, 145, 0, 0.11), transparent 38%),
     #0d0d0b;
 }
 
-.home-path__visual .home-app-phone {
-  height: 100%;
-  width: auto;
-  max-width: min(168px, 42vw);
-  aspect-ratio: 9 / 18.5;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
-  border-color: #3d3d3c;
-}
-
-.home-app-phone .mock-phone__screen.home-app-login {
-  padding: 1.55rem 0.42rem 0.45rem !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  background: #242423 !important;
-  border-radius: 24px;
-}
-
-.home-app-login__inner {
+.home-path-phone {
+  flex: 1;
+  min-height: 0;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.home-app-login__logo-section {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 0.45rem;
+  justify-content: center;
 }
 
-.home-app-login__logo-frame {
-  width: 72%;
-  aspect-ratio: 236 / 192;
-  overflow: hidden;
-  margin-bottom: 0.12rem;
+.home-path-phone__frame {
+  height: 100%;
+  width: auto;
+  max-width: 46%;
+  aspect-ratio: 9 / 18.5;
+  transform: none;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.42), 0 0 32px rgba(0, 255, 0, 0.07);
 }
 
-.home-app-login__logo-img {
-  width: 104%;
-  height: auto;
-  aspect-ratio: 1;
-  margin-left: -2%;
-  margin-top: -10%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.home-app-login__logo-text {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  color: #fff;
-}
-
-.home-app-login__logo-text b { color: #00ff00; }
-
-.home-app-login__title {
-  margin: 0 0 0.42rem;
-  color: #fff;
-  font-size: 0.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.home-app-login__field {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 1.28rem;
-  margin-bottom: 0.28rem;
-  padding: 0.26rem 0.36rem;
-  border: 1px solid #00ff00;
-  border-radius: 4px;
-  background: #2d2d2c;
-}
-
-.home-app-login__field span {
-  color: #a0a0a0;
-  font-size: 0.37rem;
-  line-height: 1.2;
-}
-
-.home-app-login__field--password i {
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 1px solid #a0a0a0;
-  border-radius: 50%;
-  opacity: 0.75;
-}
-
-.home-app-login__btn {
-  margin-top: 0.08rem;
-  padding: 0.36rem 0.42rem;
-  border-radius: 5px;
-  background: #00ff00;
-  color: #242423;
-  font-size: 0.4rem;
-  font-weight: 800;
-  line-height: 1.2;
-  text-align: center;
+.home-path-phone__frame .phone-frame__screen.app-home-ui {
+  justify-content: flex-start;
+  padding: 1.85rem 0.55rem 0.5rem;
+  background:
+    radial-gradient(circle at 76% 18%, rgba(0, 255, 0, 0.12), transparent 30%),
+    #242423;
 }
 
 .home-path__content {
@@ -4137,16 +4099,29 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
   line-height: 1.7;
 }
-.home-path__content > a {
+.home-path__cta {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 0.55rem;
+  min-height: 2.65rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(0,255,0,.24);
+  border-radius: 999px;
+  background: rgba(0,255,0,.055);
   color: var(--text);
   font-weight: 800;
   text-decoration: none;
 }
-.home-path__content > a span { color: var(--accent); }
-.home-path__content > a:hover { color: var(--accent); }
+.home-path__cta b { color: var(--accent); }
+.home-path:hover .home-path__cta,
+.home-path:focus-visible .home-path__cta {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #071007;
+}
+.home-path:hover .home-path__cta b,
+.home-path:focus-visible .home-path__cta b { color: #071007; }
 
 @media (min-width: 760px) {
   .home-mission__inner {
@@ -4155,8 +4130,9 @@ img { max-width: 100%; display: block; }
   }
   .home-paths__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    align-items: stretch;
   }
+  .home-path { height: 100%; }
 }
 
 @media (max-width: 679px) {
@@ -4168,12 +4144,23 @@ img { max-width: 100%; display: block; }
   .home-hero__lead { line-height: 1.8; }
   .home-hero__mark { right: -0.2em; opacity: 0.45; }
   .home-mission h2 span { white-space: normal; }
+  .home-mission,
+  .home-paths { padding: 4.5rem 0; }
   .home-page .news-feature__card { grid-template-columns: 88px 1fr; align-items: center; }
   .home-page .news-feature__img { width: 88px; height: 88px; }
   .home-page .news-feature__sum { display: none; }
+  .home-paths__head { margin-bottom: 2rem; }
+  .home-paths__grid { gap: 1rem; }
+  .home-path__visual { height: 210px; padding: 2.2rem 0.85rem 0.75rem; }
+  .home-path-phone__frame { max-width: 38%; }
+  .home-path__content { padding: 1.2rem; }
+  .home-path__content h3 { margin-bottom: 0.5rem; font-size: 1.7rem; }
+  .home-path__content > p:not(.eyebrow) { margin: 0.6rem 0 1rem; font-size: 0.86rem; }
+  .home-path__cta { min-height: 2.5rem; font-size: 0.86rem; }
   .home-team-ui__body { grid-template-columns: 42px 1fr; }
   .home-team-ui__main { padding: 0.55rem; }
   .home-team-ui__stats span { padding: 0.35rem; }
+  .home-team-ui__chart { padding: 0.35rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
