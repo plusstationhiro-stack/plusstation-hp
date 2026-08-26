@@ -101,9 +101,19 @@
                     <strong>今日のトレーニング</strong>
                     <span>すべて見る</span>
                   </div>
-                  <div class="app-home-ui__training">
-                    <div class="app-home-ui__thumb"><i>▶</i><small>06:20</small></div>
-                    <div><strong>加速の基礎ドリル</strong><span>スプリント・初級</span></div>
+                  <div class="app-home-ui__training-list">
+                    <div class="app-home-ui__training app-home-ui__training--compact">
+                      <div class="app-home-ui__thumb"><i>▶</i><small>06:20</small></div>
+                      <div><strong>加速の基礎</strong><span>スプリント</span></div>
+                    </div>
+                    <div class="app-home-ui__training app-home-ui__training--compact">
+                      <div class="app-home-ui__thumb app-home-ui__thumb--jump"><i>▶</i><small>05:10</small></div>
+                      <div><strong>着地を安定</strong><span>ジャンプ</span></div>
+                    </div>
+                    <div class="app-home-ui__training app-home-ui__training--compact">
+                      <div class="app-home-ui__thumb app-home-ui__thumb--care"><i>▶</i><small>08:45</small></div>
+                      <div><strong>疲労をケア</strong><span>リカバリー</span></div>
+                    </div>
                   </div>
                   <div class="app-home-ui__nav">
                     <b><i></i><span>ホーム</span></b>
@@ -142,8 +152,8 @@
           <div class="wrap">
             <p class="eyebrow">++Stationでできること</p>
             <h2 id="app-capabilities-heading">
-              <span class="heading-line">動画から記録、分析まで</span>
-              <span class="heading-line">ひとつの流れに</span>
+              <span class="heading-line">動画・記録・分析を、</span>
+              <span class="heading-line">ひとつの流れにする</span>
             </h2>
             <p class="section-definition">
               トレーニング動画で種目を選び、体調と練習を残し、Scoreとランキングで自分の変化を確かめる。自主トレに必要な要素を、アプリひとつでつなぎます。
@@ -165,13 +175,7 @@
                 <span class="heading-line">ライブラリとブラウズで</span>
                 <span class="heading-line">今日の練習を決める</span>
               </h2>
-              <p>500本以上のトレーニング・ケア動画を、キーワード検索やカテゴリから探せます。ブラウズ画面では目的別に種目を見比べ、気に入った動画は自分用メニューにまとめられます。スペシャルコースでは、課題に沿った取り組みも選べます。</p>
-              <ul class="app-feature__points">
-                <li>動画一覧から種目を探せる</li>
-                <li>ライブラリからフル動画を確認できる</li>
-                <li>自分用のメニューを作成できる</li>
-                <li>目的別のスペシャルコースに取り組める</li>
-              </ul>
+              <p>「何をやればいいか分からない」を、探す・選ぶ・続けるの流れに変えます。500本以上のトレーニング・ケア動画から、目的や課題に合う種目へ迷わずたどり着けます。</p>
             </div>
             <div class="app-ui-stage app-ui-stage--videos" aria-hidden="true">
               <div class="app-ui-card app-video-ui">
@@ -188,6 +192,44 @@
                 </div>
               </div>
             </div>
+            <ol class="app-video-journey">
+              <li>
+                <div class="app-video-journey__copy">
+                  <span>STEP 01</span>
+                  <h3>目的から探す</h3>
+                  <p>スプリント、ジャンプ、ケアなど、伸ばしたい目的から候補を絞り込みます。種目名を知らなくても、今日取り組む内容を選べます。</p>
+                </div>
+                <div class="app-video-journey__ui app-video-browse-mini" aria-hidden="true">
+                  <small>BROWSE</small>
+                  <strong>何を高めたい？</strong>
+                  <i>↗ <b>スプリント</b></i><i>↑ <b>ジャンプ</b></i><i>＋ <b>コンディショニング</b></i>
+                </div>
+              </li>
+              <li>
+                <div class="app-video-journey__copy">
+                  <span>STEP 02</span>
+                  <h3>内容を見比べる</h3>
+                  <p>時間、難易度、目的を確認しながら動画を比較。フル動画で動きを確かめてから、自分に合う種目を選択できます。</p>
+                </div>
+                <div class="app-video-journey__ui app-video-detail-mini" aria-hidden="true">
+                  <div><b>▶</b><small>08:45</small></div>
+                  <span><em>おすすめ</em><strong>切り返しを速くする<br />ステップドリル</strong><small>アジリティ・中級</small></span>
+                </div>
+              </li>
+              <li>
+                <div class="app-video-journey__copy">
+                  <span>STEP 03</span>
+                  <h3>自分のメニューにまとめる</h3>
+                  <p>選んだ動画を自分用メニューに保存。次回も探し直さず、決めた順番で自主トレを始められます。</p>
+                </div>
+                <div class="app-video-journey__ui app-video-menu-mini" aria-hidden="true">
+                  <small>MY MENU</small><strong>試合前の加速メニュー</strong>
+                  <i><b>01</b> 加速の基礎ドリル <em>06:20</em></i>
+                  <i><b>02</b> 切り返しステップ <em>08:45</em></i>
+                  <i><b>03</b> 下半身リカバリー <em>05:10</em></i>
+                </div>
+              </li>
+            </ol>
           </div>
         </section>
 
@@ -196,8 +238,8 @@
             <div class="app-feature__copy">
               <p class="eyebrow">機能 02 / 記録・コンディション</p>
               <h2 id="app-record-heading">
-                <span class="heading-line">朝の体調と練習後の疲労</span>
-                <span class="heading-line">を感覚に任せない</span>
+                <span class="heading-line">体調と疲労の変化を、</span>
+                <span class="heading-line">感覚だけに任せない</span>
               </h2>
               <p>朝のコンディション、練習後のきつさや時間、フィジカルテストを記録。カレンダーとグラフで疲労や体調の推移を振り返れます。数値は診断ではなく、次のトレーニングを考えるための材料です。</p>
               <ul class="app-feature__points">
@@ -235,8 +277,8 @@
             <div class="app-feature__copy">
               <p class="eyebrow">機能 03 / Score・ランキング</p>
               <h2 id="app-score-heading">
-                <span class="heading-line">身体の傾向を把握し</span>
-                <span class="heading-line">同世代と切磋琢磨</span>
+                <span class="heading-line">身体の傾向を知り、</span>
+                <span class="heading-line">同世代と競い合う</span>
               </h2>
               <p>フィジカルテストの結果を可視化し、得意な軸と伸ばしたい軸を確認できます。同年代のランキングでは、全国の選手と現在地を比べながら、自主トレの励みにできます。</p>
               <ul class="app-feature__points">
@@ -284,9 +326,27 @@
               </h2>
             </div>
             <div class="app-more__grid">
-              <article><span>01</span><h3>ランニングを記録</h3><p>走ったルートや時間を残し、自主トレの積み重ねを振り返れます。</p></article>
-              <article><span>02</span><h3>予定をカレンダーで管理</h3><p>トレーニング予定と記録をまとめ、通知で習慣づくりを支えます。</p></article>
-              <article><span>03</span><h3>ケガの状態を残す</h3><p>気になる部位や状態を記録し、コンディション管理の材料にできます。</p></article>
+              <article>
+                <span>01</span>
+                <div class="app-more__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64"><path d="M10 48C18 30 25 42 32 23s15-5 22-15"/><circle cx="10" cy="48" r="4"/><path d="M45 8h9v9"/></svg>
+                </div>
+                <h3>ランニングを記録</h3><p>位置情報を許可したときだけ、走ったルートや時間を記録。自主トレの距離と積み重ねを振り返れます。</p>
+              </article>
+              <article>
+                <span>02</span>
+                <div class="app-more__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="40" rx="4"/><path d="M10 25h44M21 9v10M43 9v10M20 35h7M32 35h7M44 35h2M20 45h7M32 45h7"/></svg>
+                </div>
+                <h3>予定をカレンダーで管理</h3><p>トレーニング予定と記録をひとつのカレンダーに整理。通知を使い、取り組むタイミングを忘れにくくします。</p>
+              </article>
+              <article>
+                <span>03</span>
+                <div class="app-more__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64"><path d="M26 9h12v12h12v12H38v12H26V33H14V21h12Z"/><path d="M13 53h38"/></svg>
+                </div>
+                <h3>ケガの状態を残す</h3><p>気になる部位、痛みの程度、発生日や経過を記録。無理なトレーニングを避け、復帰を考えるための材料にできます。</p>
+              </article>
             </div>
           </div>
         </section>

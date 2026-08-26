@@ -239,13 +239,13 @@
               <span class="heading-line">チーム力を強化する</span>
             </h2>
             <p class="section-definition">
-              選手が状態を記録し、指導者が体調と能力を把握。課題に合うトレーニングへ取り組み、継続的にチーム力を高めます。
+              選手が状態を記録し、指導者が変化を早めに把握。声かけや負荷調整、課題に合うトレーニングへつなげ、継続的にチーム力を高めます。
             </p>
             <ol class="capability-strip">
-              <li><span>01</span><strong>日々の状態を記録</strong><small>選手が朝の体調や練習後の状態を入力します。</small></li>
-              <li><span>02</span><strong>体調・能力を把握</strong><small>入力データと測定結果を、一覧やグラフで確認します。</small></li>
-              <li><span>03</span><strong>練習に取り組む</strong><small>状態や課題に合う動画メニューを選手へ届けます。</small></li>
-              <li><span>04</span><strong>チーム力を強化</strong><small>状態に合う取り組みを続け、次の練習や運用改善へつなげます。</small></li>
+              <li><span>01</span><div class="capability-strip__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="10" y="7" width="28" height="34" rx="3"/><path d="M17 15h14M17 23h14M17 31h8"/><path d="m29 31 3 3 6-7"/></svg></div><strong>日々の状態を記録</strong><small>選手が朝の体調や練習後の状態を入力します。</small></li>
+              <li><span>02</span><div class="capability-strip__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 38h32M11 34l8-9 7 5 11-16"/><circle cx="11" cy="34" r="2"/><circle cx="19" cy="25" r="2"/><circle cx="26" cy="30" r="2"/><circle cx="37" cy="14" r="2"/></svg></div><strong>変化を早めに把握</strong><small>疲労や痛みの記録を一覧で見て、声かけが必要な選手を確認します。</small></li>
+              <li><span>03</span><div class="capability-strip__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="15"/><path d="m21 17 10 7-10 7Z"/></svg></div><strong>練習に取り組む</strong><small>状態や課題に合う動画メニューを選手へ届けます。</small></li>
+              <li><span>04</span><div class="capability-strip__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 36V22h8v14M20 36V14h8v22M31 36V8h8v28M7 40h34"/></svg></div><strong>チーム力を強化</strong><small>記録と実践を次の練習や運用改善へつなげます。</small></li>
             </ol>
           </div>
         </section>
@@ -255,11 +255,11 @@
             <div class="section-heading">
               <p class="eyebrow">機能 01 / コンディション管理</p>
               <h2 id="condition-heading">
-                <span class="heading-line">疲労の変化を見て、</span>
-                <span class="heading-line">入力忘れも防ぐ</span>
+                <span class="heading-line">体調や疲労の変化を見て、</span>
+                <span class="heading-line">怪我を減らす</span>
               </h2>
               <p class="section-definition">
-                選手が朝の体調や練習後のきつさ・時間を入力すると、指導者は疲労の推移を一覧とグラフで確認できます。未入力の選手には通知し、入力忘れを防止。数値は声かけや練習内容を考えるための目安として使います。
+                選手が朝の体調や練習後のきつさ・時間を入力すると、指導者は疲労の推移を一覧とグラフで確認できます。変化がある選手へ早めに声をかけ、練習量やケアを考えるための判断材料に。未入力の選手も確認できるため、記録の抜けを減らせます。
               </p>
             </div>
             <div class="condition-layout">
@@ -301,64 +301,137 @@
                 <div class="missing-row"><span><i class="ui-avatar">D</i>選手D</span><span><i class="ui-avatar">E</i>選手E</span><span><i class="ui-avatar">F</i>選手F</span><small>ほか1名</small></div>
               </div>
             </div>
+            <div class="condition-actions">
+              <article><span>01</span><strong>変化に気づく</strong><p>疲労、睡眠、練習後のきつさを継続して確認し、普段との違いを見つけやすくします。</p></article>
+              <article><span>02</span><strong>選手へ声をかける</strong><p>気になる変化を見つけたら、指導者が本人の状態を確認。数値だけで決めつけず、対話のきっかけにします。</p></article>
+              <article><span>03</span><strong>練習を調整する</strong><p>必要に応じて練習量やメニューを見直し、無理を重ねにくいチーム運用につなげます。</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="team-section injury-section" aria-labelledby="injury-heading">
+          <div class="wrap">
+            <div class="section-heading section-heading--wide">
+              <p class="eyebrow">機能 02 / 怪我管理</p>
+              <h2 id="injury-heading">
+                <span class="heading-line">怪我の状態を記録し、</span>
+                <span class="heading-line">復帰までの経過を共有する</span>
+              </h2>
+            </div>
+            <div class="injury-product-visual" role="img" aria-label="怪我の記録フォームと指導者向け怪我管理画面のイメージ">
+              <div class="mock-phone mock-phone--injury">
+                <div class="mock-phone__speaker"></div>
+                <div class="mock-phone__screen injury-form-ui">
+                  <small>怪我の記録を追加</small>
+                  <strong>怪我の情報</strong>
+                  <label><span>怪我をした日</span><b>2026 / 08 / 24 <i>▣</i></b></label>
+                  <label><span>時間（任意）</span><b>練習後半</b></label>
+                  <label><span>部位</span><b>右ひざ <i>⌄</i></b></label>
+                  <label class="injury-form-ui__memo"><span>状況・受傷原因（任意）</span><b>切り返しの動作で痛みが出た</b></label>
+                  <div class="injury-form-ui__status"><span><strong>完治として記録</strong><small>オフ＝治療中、オン＝完治</small></span><i></i></div>
+                  <button type="button" tabindex="-1">保存する</button>
+                </div>
+              </div>
+              <div class="ui-window injury-roster-ui">
+                <div class="ui-window__bar"><span></span><span></span><span></span><small>怪我管理</small></div>
+                <div class="injury-roster-ui__head">
+                  <div><small>TEAM RECORDS</small><strong>選手の怪我管理</strong></div>
+                  <p>治療中は赤丸で表示</p>
+                </div>
+                <div class="injury-roster-ui__body">
+                  <div class="injury-roster-ui__players">
+                    <button type="button" class="is-active" tabindex="-1"><i></i><span>選手A<small>右ひざ</small></span><b>治療中</b></button>
+                    <button type="button" tabindex="-1"><i></i><span>選手B<small>記録なし</small></span><em>›</em></button>
+                    <button type="button" tabindex="-1"><i></i><span>選手C<small>左足首</small></span><b>治療中</b></button>
+                    <button type="button" tabindex="-1"><i></i><span>選手D<small>完治</small></span><em>›</em></button>
+                  </div>
+                  <div class="injury-roster-ui__detail">
+                    <div class="injury-roster-ui__detail-head"><span>‹ 選手一覧</span><strong>選手Aの怪我経過</strong><small>治療中・完治を含む記録</small></div>
+                    <div class="injury-record-card">
+                      <div><strong>2026 / 08 / 24</strong><b>治療中</b></div>
+                      <p><span>部位</span><strong>右ひざ</strong></p>
+                      <p><span>受傷原因</span><strong>切り返しの動作</strong></p>
+                      <hr />
+                      <small>医師・専門職からの指示</small>
+                      <p class="injury-record-card__instruction">運動量を調整し、痛みの変化を確認</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="injury-explanation">
+              <h3 class="injury-explanation__title">選手の記録を、指導者が同じ画面で確認</h3>
+              <p>日付・部位・状況をアプリから記録。治療中の選手の経過と、医師・専門職の指示を同じ画面で共有。</p>
+              <small>※画面はHP掲載用に再構成したイメージです。医療行為や診断の代わりではありません。</small>
+            </div>
           </div>
         </section>
 
         <section class="team-section training-section" aria-labelledby="training-heading">
           <div class="wrap">
             <div class="section-heading section-heading--wide">
-              <p class="eyebrow">機能 02 / 自主トレ支援</p>
+              <p class="eyebrow">機能 03 / 自主トレ支援</p>
               <h2 id="training-heading">
-                <span class="heading-line">動画を見つけて、</span>
-                <span class="heading-line">メニューで届ける</span>
+                <span class="heading-line">動画を選び、</span>
+                <span class="heading-line">選手へメニューで届ける</span>
               </h2>
               <p class="section-definition">
-                500本以上のトレーニング・ケア動画を検索やタグで絞り込み、ブラウズ画面では目的から直感的に探せます。選んだ動画はチームメニューとして共有でき、対応動画はオフライン再生にも備えられます。
+                500本以上のトレーニング・ケア動画から、チームの課題に合う内容を選択。探すところからメニューとして選手へ届けるところまで、ひとつの流れで進められます。
               </p>
             </div>
-            <div class="training-composition">
-              <div class="ui-window video-library" role="img" aria-label="動画を検索して絞り込むライブラリ画面イメージ">
-                <div class="ui-window__bar"><span></span><span></span><span></span><small>トレーニング動画</small></div>
-                <div class="video-library__head">
-                  <div><strong>動画ライブラリ</strong><small>500本以上</small></div>
-                  <span class="mock-search">動画を検索</span>
+            <ol class="team-training-journey">
+              <li>
+                <div class="team-training-journey__copy"><span>STEP 01</span><h3>ライブラリから探す</h3><p>キーワードと競技動作のタグから候補を絞り込みます。動画の時間や目的を見比べながら、チームの課題に合う種目を選べます。</p></div>
+                <div class="team-training-journey__visual">
+                  <div class="ui-window video-library" role="img" aria-label="動画を検索して絞り込むライブラリ画面イメージ">
+                    <div class="ui-window__bar"><span></span><span></span><span></span><small>トレーニング動画</small></div>
+                    <div class="video-library__head"><div><strong>動画ライブラリ</strong><small>500本以上</small></div><span class="mock-search">動画を検索</span></div>
+                    <div class="mock-tags"><b class="is-active">すべて</b><b>スプリント</b><b>ジャンプ</b><b>筋力</b><b>ケア</b></div>
+                    <div class="mock-video-grid">
+                      <article><div class="mock-thumb mock-thumb--sprint"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>06:20</small></div><strong>加速の基礎ドリル</strong><span>スプリント</span></article>
+                      <article><div class="mock-thumb mock-thumb--jump"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>08:45</small></div><strong>着地からのジャンプ</strong><span>ジャンプ</span></article>
+                      <article><div class="mock-thumb mock-thumb--strength"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>05:10</small></div><strong>下半身の安定性</strong><span>筋力</span></article>
+                      <article><div class="mock-thumb mock-thumb--care"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>09:30</small></div><strong>練習後のリカバリー</strong><span>ケア</span></article>
+                    </div>
+                  </div>
                 </div>
-                <div class="mock-tags"><b class="is-active">すべて</b><b>スプリント</b><b>ジャンプ</b><b>筋力</b><b>ケア</b></div>
-                <div class="mock-video-grid">
-                  <article><div class="mock-thumb mock-thumb--sprint"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>06:20</small></div><strong>加速の基礎ドリル</strong><span>スプリント</span></article>
-                  <article><div class="mock-thumb mock-thumb--jump"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>08:45</small></div><strong>着地からのジャンプ</strong><span>ジャンプ</span></article>
-                  <article><div class="mock-thumb mock-thumb--strength"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>05:10</small></div><strong>下半身の安定性</strong><span>筋力</span></article>
-                  <article><div class="mock-thumb mock-thumb--care"><span class="mock-thumb__brand"><b>++</b>Station</span><i>▶</i><small>09:30</small></div><strong>練習後のリカバリー</strong><span>ケア</span></article>
+              </li>
+              <li>
+                <div class="team-training-journey__copy"><span>STEP 02</span><h3>目的から選ぶ</h3><p>種目名が決まっていなくても、スプリント、ジャンプ、コンディショニングなど、伸ばしたい目的から直感的に探せます。</p></div>
+                <div class="team-training-journey__visual">
+                  <div class="mock-phone mock-phone--browse" role="img" aria-label="目的から動画を探すスマートフォン画面イメージ">
+                    <div class="mock-phone__speaker"></div>
+                    <div class="mock-phone__screen">
+                      <small>BROWSE</small><strong>何を高めたい？</strong>
+                      <div class="browse-tile"><i>↗</i><span><b>スプリント</b><small>速さ・加速</small></span></div>
+                      <div class="browse-tile"><i>↑</i><span><b>ジャンプ</b><small>高さ・パワー</small></span></div>
+                      <div class="browse-tile"><i>＋</i><span><b>コンディショニング</b><small>準備・ケア</small></span></div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="mock-phone mock-phone--browse" role="img" aria-label="目的から動画を探すスマートフォン画面イメージ">
-                <div class="mock-phone__speaker"></div>
-                <div class="mock-phone__screen">
-                  <small>BROWSE</small><strong>何を高めたい？</strong>
-                  <div class="browse-tile"><i>↗</i><span><b>スプリント</b><small>速さ・加速</small></span></div>
-                  <div class="browse-tile"><i>↑</i><span><b>ジャンプ</b><small>高さ・パワー</small></span></div>
-                  <div class="browse-tile"><i>＋</i><span><b>コンディショニング</b><small>準備・ケア</small></span></div>
+              </li>
+              <li>
+                <div class="team-training-journey__copy"><span>STEP 03</span><h3>メニューにして届ける</h3><p>選んだ動画を順番にまとめ、チームメニューとして選手へ共有。対応動画は事前に保存でき、合宿や遠征先での再生にも備えられます。</p></div>
+                <div class="team-training-journey__visual">
+                  <div class="menu-offline" role="img" aria-label="チームメニューとオフライン保存の画面イメージ">
+                    <p class="eyebrow">TEAM MENU</p><strong>遠征日のモビリティ</strong><small>4本・約18分</small>
+                    <ol>
+                      <li><i>01</i><span>股関節モビリティ<small>04:30</small></span><b>保存済</b></li>
+                      <li><i>02</i><span>体幹アクティベーション<small>05:20</small></span><b>保存済</b></li>
+                      <li><i>03</i><span>下半身ストレッチ<small>04:10</small></span><b>保存済</b></li>
+                    </ol>
+                    <div class="offline-status"><span>↓</span><p><strong>オフライン再生に対応</strong><small>通信環境が不安定な合宿・遠征先にも</small></p><b>準備完了</b></div>
+                  </div>
                 </div>
-              </div>
-              <div class="menu-offline" role="img" aria-label="チームメニューとオフライン保存の画面イメージ">
-                <p class="eyebrow">TEAM MENU</p>
-                <strong>遠征日のモビリティ</strong>
-                <small>4本・約18分</small>
-                <ol>
-                  <li><i>01</i><span>股関節モビリティ<small>04:30</small></span><b>保存済</b></li>
-                  <li><i>02</i><span>体幹アクティベーション<small>05:20</small></span><b>保存済</b></li>
-                  <li><i>03</i><span>下半身ストレッチ<small>04:10</small></span><b>保存済</b></li>
-                </ol>
-                <div class="offline-status"><span>↓</span><p><strong>オフライン再生に対応</strong><small>通信環境が不安定な合宿・遠征先にも</small></p><b>準備完了</b></div>
-              </div>
-            </div>
+              </li>
+            </ol>
           </div>
         </section>
 
         <section class="team-section team-section--grid" aria-labelledby="physical-heading">
           <div class="wrap physical-layout">
             <div class="section-heading">
-              <p class="eyebrow">機能 03 / フィジカル分析</p>
+              <p class="eyebrow">機能 04 / フィジカル分析</p>
               <h2 id="physical-heading">
                 <span class="heading-line">7つの軸で、</span>
                 <span class="heading-line">身体能力の傾向を見る</span>
@@ -370,7 +443,8 @@
                 <li>スプリント</li><li>ジャンプ・バネ</li><li>ジャンプ・パワー</li><li>持久力</li><li>上半身筋力</li><li>下半身筋力</li><li>COD</li>
               </ul>
             </div>
-            <div class="radar-system" role="img" aria-label="選手Aの7軸フィジカルレーダーとおすすめ動画の画面イメージ">
+            <div class="physical-visual">
+              <div class="radar-system" role="img" aria-label="選手Aの7軸フィジカルレーダーとおすすめ動画の画面イメージ">
               <div class="radar-panel">
                 <div class="ui-panel__title"><strong>選手A・フィジカル</strong><small>最新の測定</small></div>
                 <div class="radar-svg-wrap">
@@ -405,6 +479,8 @@
                   <article><div class="mock-thumb mock-thumb--strength"><i>▶</i></div><p><span>下半身筋力</span><strong>片脚の安定性</strong><small>約9分</small></p></article>
                 </div>
               </div>
+              </div>
+              <p class="physical-visual-note">※イメージ図</p>
             </div>
           </div>
         </section>
@@ -412,7 +488,7 @@
         <section class="team-section customization-section" aria-labelledby="customization-heading">
           <div class="wrap">
             <div class="section-heading">
-              <p class="eyebrow">機能 04 / 機能カスタマイズ</p>
+              <p class="eyebrow">機能 05 / 機能カスタマイズ</p>
               <h2 id="customization-heading">
                 <span class="heading-line">チームに合わせて、</span>
                 <span class="heading-line">機能をカスタマイズ</span>
@@ -452,10 +528,10 @@
         <section class="team-section brand-experience-section" aria-labelledby="brand-experience-heading">
           <div class="wrap brand-experience-layout">
             <div>
-              <p class="eyebrow">機能 05 / チーム専用デザイン</p>
+              <p class="eyebrow">機能 06 / チーム専用デザイン</p>
               <h2 id="brand-experience-heading">
                 <span class="heading-line">ロゴとカラーで、</span>
-                <span class="heading-line">チーム専用画面に</span>
+                <span class="heading-line">チーム専用の画面をつくる</span>
               </h2>
               <p class="section-definition">
                 契約チームのカラーやロゴを画面に反映できます。選手が毎日使うホームや記録画面を、チームオリジナルのサービスとして感じられるデザインに整えます。
@@ -491,7 +567,10 @@
         <section class="team-section experts-section" aria-labelledby="expertise-heading">
           <div class="wrap">
             <p class="eyebrow">コンテンツの信頼性</p>
-            <h2 class="section-title" id="expertise-heading">専門職が関わるトレーニング動画</h2>
+            <h2 class="section-title" id="expertise-heading">
+              <span class="heading-line">専門職が関わる</span>
+              <span class="heading-line">トレーニング動画</span>
+            </h2>
             <p class="section-definition">
               理学療法士やトレーニング資格保有者が、動画コンテンツの制作に関わっています。競技現場と身体づくりの知見を、選手が実践しやすい形で届けます。
             </p>
@@ -509,7 +588,7 @@
                   <img class="person__photo" src="/assets/people/pt.png" alt="クロ（理学療法士）" width="240" height="240" />
                 </div>
                 <h3 class="person__name">クロ</h3>
-                <p class="person__creds">理学療法士 / Animal Flow Lv1 Instructor</p>
+                <p class="person__creds">理学療法士<br />Animal Flow Lv1 Instructor</p>
                 <p class="person__bio">埼玉県内のサッカーユースチームへメディカル・フィジカルサポートを実施。現在は、児童福祉事業で幼児〜高校生まで幅広く支援。身体作り、競技力向上、ケアまで全力でサポートしていきます。</p>
               </li>
             </ul>
