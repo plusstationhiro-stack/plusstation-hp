@@ -4152,38 +4152,6 @@ img { max-width: 100%; display: block; }
 }
 .home-paths__grid { display: grid; gap: 1.25rem; }
 
-.home-supporters {
-  padding: clamp(3rem, 7vw, 5rem) 0 clamp(3.5rem, 8vw, 5.5rem);
-  background: #0c0e0c;
-  border-top: 1px solid var(--border);
-}
-.home-supporters p {
-  margin: 0 0 clamp(1.5rem, 4vw, 2.25rem);
-  text-align: center;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
-  line-height: 1.7;
-}
-.home-supporters__logos {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.75rem 2.75rem;
-  margin: 0;
-  padding: 0;
-}
-.home-supporters__logos a {
-  display: block;
-  line-height: 0;
-}
-.home-supporters__logos img {
-  display: block;
-  width: 132px;
-  height: auto;
-  object-fit: contain;
-}
-
 .home-path {
   min-width: 0;
   display: flex;
