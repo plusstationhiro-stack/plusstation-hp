@@ -41,6 +41,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://plus-station.jp/news/chibajets-u15-partnership</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://plus-station.jp/news/cheval-u15-partnership</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

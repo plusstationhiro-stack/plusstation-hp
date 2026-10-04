@@ -107,8 +107,16 @@ ${footer()}
 }
 
 function formatDate(iso) {
-  const [y, m, d] = iso.split("-");
+  if (!iso || !String(iso).includes("-")) return "";
+  const [y, m, d] = String(iso).split("-");
+  if (!y || !m || !d) return "";
   return `${y}年${Number(m)}月${Number(d)}日`;
+}
+
+function metaLine(a) {
+  const date = formatDate(a.date);
+  const category = a.category || "News";
+  return date ? `${date} · ${category}` : category;
 }
 
 function partnerLinkAttrs() {
@@ -129,7 +137,11 @@ function newsImageBlock(a, { className = "", linkClass = "", width = 320, height
 const raw = JSON.parse(fs.readFileSync(newsPath, "utf8"));
 const articles = raw
   .filter((a) => a.published !== false)
-  .sort((a, b) => (a.date < b.date ? 1 : -1));
+  .sort((a, b) => {
+    const da = a.date || "9999-99-99";
+    const db = b.date || "9999-99-99";
+    return da < db ? 1 : -1;
+  });
 
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -145,7 +157,7 @@ for (const a of articles) {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
     headline: a.title,
-    datePublished: a.date,
+    ...(a.date ? { datePublished: a.date } : {}),
     description: a.description || a.summary,
     url: articleUrl,
     mainEntityOfPage: articleUrl,
@@ -168,7 +180,7 @@ for (const a of articles) {
   const main = `
         <article class="wrap legal news-article">
           <p class="muted"><a href="/pages/news.html">← お知らせ一覧</a></p>
-          <p class="eyebrow">${esc(a.category || "News")} · ${esc(formatDate(a.date))}</p>
+          <p class="eyebrow">${esc(metaLine(a))}</p>
           <h1>${esc(a.title)}</h1>
           <p class="enacted">${esc(a.summary || "")}</p>
 ${imageBlock}${paragraphs}
@@ -203,7 +215,7 @@ ${articles
               ${thumbCell}
               <a class="news-list__content" href="/pages/news/${esc(a.slug)}.html">
                 <span class="news-list__body">
-                  <span class="news-list__meta">${esc(formatDate(a.date))} · ${esc(a.category || "News")}</span>
+                  <span class="news-list__meta">${esc(metaLine(a))}</span>
                   <span class="news-list__title">${esc(a.title)}</span>
                   <span class="news-list__sum">${esc(a.summary || "")}</span>
                 </span>
@@ -245,7 +257,7 @@ fs.writeFileSync(
       hasPart: articles.map((a) => ({
         "@type": "NewsArticle",
         headline: a.title,
-        datePublished: a.date,
+        ...(a.date ? { datePublished: a.date } : {}),
         url: `${SITE}/news/${a.slug}`,
       })),
     },
@@ -275,7 +287,7 @@ const newsSlot = latest
               }
               <a class="news-feature__body-link" href="/pages/news/${esc(latest.slug)}.html">
                 <div class="news-feature__body">
-                  <p class="news-feature__meta">${esc(formatDate(latest.date))} · ${esc(latest.category || "News")}</p>
+                  <p class="news-feature__meta">${esc(metaLine(latest))}</p>
                   <h3 class="news-feature__title">${esc(latest.title.replace(/^【[^】]+】/, "").trim() || latest.title)}</h3>
                   <p class="news-feature__sum">${esc(latest.summary || "")}</p>
                 </div>
