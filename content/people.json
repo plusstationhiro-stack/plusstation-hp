@@ -2,9 +2,9 @@
   {
     "id": "takaishi",
     "image": "/assets/people/pt-cscs.png",
-    "name": "ヒロ",
+    "name": "高石 知洋",
     "legalName": "高石 知洋",
-    "displayName": "ヒロ",
+    "displayName": "高石 知洋",
     "credentials": [
       "NSCA-CSCS",
       "理学療法士",
@@ -19,9 +19,9 @@
   {
     "id": "kurotori",
     "image": "/assets/people/pt.png",
-    "name": "クロ",
+    "name": "黒鳥 聖也",
     "legalName": "黒鳥 聖也",
-    "displayName": "クロ",
+    "displayName": "黒鳥 聖也",
     "credentials": [
       "理学療法士",
       "Animal Flow Lv1 Instructor"
