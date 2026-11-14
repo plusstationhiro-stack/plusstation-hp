@@ -3951,19 +3951,6 @@ img { max-width: 100%; display: block; }
 .team-final-cta p:not(.eyebrow) { max-width: 37rem; margin: 0 auto; color: #9ca39c; }
 .team-final-cta .btn-primary { margin-top: 2rem; padding: 1rem 1.6rem; }
 
-/* 広告との整合用（チームLPのみ）。ダメならこのブロックごと戻す */
-.team-page .btn-primary {
-  background: #b7ff00;
-  color: #0a0c0a;
-  border-radius: 999px;
-  font-weight: 800;
-}
-.team-page .btn-primary:hover {
-  background: #c8ff33;
-  color: #0a0c0a;
-  filter: none;
-}
-
 @media (min-width: 680px) {
   .capability-strip { grid-template-columns: repeat(2, 1fr); }
   .capability-strip li { padding: 1.5rem; border-right: 1px solid var(--team-line); }
