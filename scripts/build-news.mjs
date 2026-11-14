@@ -24,7 +24,8 @@ const FONT_LINKS = `
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Syne:wght@700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css" />`;
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/meta-pixel.js"></script>`;
 
 function esc(s) {
   return String(s)
