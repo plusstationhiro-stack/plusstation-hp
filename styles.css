@@ -3151,10 +3151,13 @@ img { max-width: 100%; display: block; }
 .team-hero__copy { min-width: 0; }
 
 .team-hero h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   margin: 0 0 1.5rem;
   font-size: clamp(2rem, 3.4vw, 3.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: 2px;
 }
 
 .team-hero h1 .headline-line {
@@ -3531,6 +3534,13 @@ img { max-width: 100%; display: block; }
 .condition-actions span { color: var(--accent); font-size: 0.68rem; font-weight: 800; }
 .condition-actions strong { display: block; margin-top: 2rem; font-size: 1.1rem; }
 .condition-actions p { margin: 0.65rem 0 0; color: #929992; font-size: 0.86rem; line-height: 1.75; }
+.team-visual-caption {
+  margin: clamp(1.25rem, 3vw, 2rem) 0 0;
+  max-width: 36rem;
+  color: #9ca39c;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  line-height: 1.7;
+}
 
 .injury-section {
   background:
@@ -4003,6 +4013,16 @@ img { max-width: 100%; display: block; }
   .nav a { flex: 0 0 auto; }
   .team-hero { padding-top: 3.5rem; }
   .team-hero h1 { font-size: clamp(1.9rem, 9vw, 2.75rem); }
+  .team-quote-cta h2,
+  .team-final-cta h2 {
+    font-size: clamp(1.05rem, 4.6vw, 1.3rem);
+    white-space: nowrap;
+  }
+  .training-content-value__copy,
+  .injury-explanation,
+  .customization-section .trust-points {
+    display: none;
+  }
   .ui-dashboard { aspect-ratio: 1.12 / 1; }
   .ui-sidebar { padding: 0.65rem 0.35rem; }
   .ui-sidebar > span { padding-inline: 0.25rem; }

@@ -144,8 +144,8 @@
 
 | 対象 | CTA |
 |------|-----|
-| チーム（通常） | 「導入を相談する」／「料金の目安を聞く」→ Googleフォーム |
-| チーム（広告着地 `/team/guide`） | 主CTA「気軽に相談する」→ Googleフォーム／副CTA「LINEで無料資料」→ `https://lin.ee/O7PhOn4`。無料トライアルは置かない |
+| チーム（通常） | 主CTA「無料相談」→ Googleフォーム／副CTA「LINEで相談」→ `https://lin.ee/O7PhOn4` |
+| チーム（広告着地 `/team/guide`） | 主CTA「無料相談」→ Googleフォーム／副CTA「LINEで無料資料」→ `https://lin.ee/O7PhOn4`。無料トライアルは置かない |
 | 個人 | App Store / Google Play |
 | 既存・審査 | 規約・特商法・PW 再設定へのリンク |
 
